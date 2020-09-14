@@ -1,0 +1,131 @@
+
+<% if( locals.user){%>
+    <!-- <h3><%= locals.user.department%></h3> -->
+<h2>Send Request</h2>
+
+<h3>Created By:<%= locals.user.name%></h3>
+<% if(locals.user.department=='computer'){ %>
+    <form id="regForm" action="/users/request" method="POST">
+        <div>
+            <label >Department</label>
+            <select name="type" id="">
+                
+                <option value="mechanical">Mechanical</option>
+                <option value="civil">Civil</option>
+                <option value="it">IT</option>
+                <option value="electrical">Electrical</option>
+                <option value="chemical">Chemical</option>
+            </select>
+        </div><br>
+        
+        <div>
+           
+            <input type="submit" value="Search User's">
+        </div>
+    </form>
+<% } %>
+<% if(locals.user.department=='mechanical'){ %>
+    <form id="regForm" action="/users/request" method="POST">
+        <div>
+            <label >Department</label>
+            <select name="type" id="">
+                
+                <option value="computer">Computer</option>
+                <option value="civil">Civil</option>
+                <option value="it">IT</option>
+                <option value="electrical">Electrical</option>
+                <option value="chemical">Chemical</option>
+            </select>
+        </div><br>
+        
+        <div>
+           
+            <input type="submit" value="Search User's">
+        </div>
+    </form>
+<% } %>
+<% if(locals.user.department=='civil'){ %>
+    <form id="regForm" action="/users/request" method="POST">
+        <div>
+            <label >Department</label>
+            <select name="type" id="">
+                <option value="computer">Computer</option>
+                <option value="mechanical">Mechanical</option>
+                
+                <option value="it">IT</option>
+                <option value="electrical">Electrical</option>
+                <option value="chemical">Chemical</option>
+            </select>
+        </div><br>
+        
+        <div>
+           
+            <input type="submit" value="Search User's">
+        </div>
+    </form>
+    <% } %>
+    <% if(locals.user.department=='it'){ %>
+        <form id="regForm" action="/users/request" method="POST">
+            <div>
+                <label >Department</label>
+                <select name="type" id="">
+                    <option value="computer">Computer</option>
+                    <option value="mechanical">Mechanical</option>
+                    <option value="civil">Civil</option>
+                    
+                    <option value="electrical">Electrical</option>
+                    <option value="chemical">Chemical</option>
+                </select>
+            </div><br>
+            
+            <div>
+               
+                <input type="submit" value="Search User's">
+            </div>
+        </form>
+        <% } %>
+        <% if(locals.user.department=='electrical'){ %>
+            <form id="regForm" action="/users/request" method="POST">
+                <div>
+                    <label >Department</label>
+                    <select name="type" id="">
+                        <option value="computer">Computer</option>
+                        <option value="mechanical">Mechanical</option>
+                        <option value="civil">Civil</option>
+                        <option value="it">IT</option>
+                        
+                        <option value="chemical">Chemical</option>
+                    </select>
+                </div><br>
+                
+                <div>
+                   
+                    <input type="submit" value="Search User's">
+                </div>
+            </form>
+            <% } %>  
+            <% if(locals.user.department=='chemical'){ %>
+                <form id="regForm" action="/users/request" method="POST">
+                    <div>
+                        <label >Department</label>
+                        <select name="type" id="">
+                            <option value="computer">Computer</option>
+                            <option value="mechanical">Mechanical</option>
+                            <option value="civil">Civil</option>
+                            <option value="it">IT</option>
+                            <option value="electrical">Electrical</option>
+                           
+                        </select>
+                    </div><br>
+                    
+                    <div>
+                       
+                        <input type="submit" value="Search User's">
+                    </div>
+                </form>
+                <% } %>      
+<% }else{ %>
+
+    <h3>You need to login to send friend request</h3>
+
+<% } %>    

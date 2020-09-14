@@ -1,0 +1,21 @@
+<table cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Status</th>
+        
+    </tr>
+    <tbody>
+        <% allFriends.forEach(function(friend){ %>
+            <tr>
+                <td><%=friend.friend.name %></td>
+                <td><%=friend.friend.department %></td>
+                <td><%=friend.status %></td>
+                
+            </tr>
+
+
+            <% }) %>
+    </tbody>
+    
+</table>

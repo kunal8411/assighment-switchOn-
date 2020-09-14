@@ -1,0 +1,23 @@
+<table cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tbody>
+        <% pendingUsers.forEach(function(friend){ %>
+            <tr>
+                <td><%=friend.friend.name %></td>
+                <td><%=friend.friend.department %></td>
+                <td><%=friend.status %></td>
+                <td> <a href="/friends/approve/<%= friend._id %>">Approve </a> </td>
+                <td> <a href="/friends/delete/<%= friend._id %>">Remove </a> </td>
+            </tr>
+
+
+            <% }) %>
+    </tbody>
+    
+</table>

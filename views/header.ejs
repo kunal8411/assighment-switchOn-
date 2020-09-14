@@ -1,0 +1,26 @@
+
+<% if( locals.user){%>
+<ul class="menu">
+    
+    <li><a href="/friends/pending">Pending</a></li>
+    <li><a href=""><span class="icon" data-icon="R"></span></a>
+    <li><a href="/friends/accepted">Approved</a></li>
+    <li><a href="/friends/getallfriends">See all friends</a></li>
+    <li><a href="/users/request">Send Request</a></li>
+    
+    
+    <li><a href="/users/logout">Logout</a></li>
+    </ul>
+
+    <% }else{ %>
+
+        <ul class="menu">
+    
+            
+            <li><a href="/users/signup">Signup </a></li>
+            <li><a href="/users/login">Login</a></li>
+            
+            </ul>
+        
+    
+    <% } %>    

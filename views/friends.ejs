@@ -1,0 +1,28 @@
+
+
+
+<!-- friends -->
+
+<ul>
+    <% friends.forEach(function(friend){ %>
+    <li id="<%= friend._id%>">
+        <div>
+            <span><%= friend.username%></span>
+           <form action="/friends/sendRequest" method="POST">
+            <input type="hidden" name="sender_id" value="<%= locals.user._id%>">
+            <input type="hidden" name="receeiver_name" value="<%= friend.username%>">
+            <input type="hidden" name="receeiver_email" value="<%= friend.useremail%>">
+            <input type="hidden" name="receeiver_id" value="<%= friend._id%>">
+            <button >Add Friend</button>
+           </form>
+
+        </div>
+    </li>
+
+    <% }) %>
+</ul>
+
+
+<script src="/js/togglebutton.js">
+
+</script>
