@@ -3,7 +3,7 @@ const port =8000;
 const app= express();
 app.use(express.urlencoded());
 const path= require('path');
-require('dotenv').config()
+
 const session= require('express-session');
 app.use(express.static('./assets'));
 const mongoose= require('./config/mongoose')
